@@ -37,6 +37,11 @@ const createWindow = () => {
     win.show()
   })
 
+  win.webContents.on('crashed', (e) => {
+    app.relaunch();
+    app.quit()
+  });
+
   win.on('closed', () => {
     win = null;
   });
