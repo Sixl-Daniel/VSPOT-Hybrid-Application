@@ -1,5 +1,3 @@
-# VSPOT Hybrid-App
-
 <div align="center">
 <img src="https://raw.githubusercontent.com/Sixl-Daniel/FST-Projekt-VSPOT/master/public/media/branding/logo.png" width="300" height="300">
 <h1>VSPOT<br><small>Digital Signage Solution</small></h1>
