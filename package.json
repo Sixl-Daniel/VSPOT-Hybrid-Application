@@ -1,6 +1,6 @@
 {
   "name": "vspot-app",
-  "productName": "VSPOT - Client App",
+  "productName": "VSPOT-Client-App",
   "version": "1.0.0",
   "description": "Electron application for VSPOT Digital Signage Solution",
   "main": "src/index.js",
