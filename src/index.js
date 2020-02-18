@@ -3,14 +3,20 @@ const {
   BrowserWindow,
   globalShortcut
 } = require('electron');
+
+const Store = require('electron-store');
 const path = require('path');
-require('dotenv').config();
 
 if (require('electron-squirrel-startup')) { // eslint-disable-line global-require
   app.quit();
 }
 
 let win;
+
+const store = new Store();
+const fallbackUrl = 'https://vspot.eu/demo';
+
+if (!store.has('url')) store.set('url', fallbackUrl);
 
 const createWindow = () => {
 
@@ -26,10 +32,11 @@ const createWindow = () => {
     alwaysOnTop: true,
     webPreferences: {
       nodeIntegration: true
-    }
+    },
+    icon: path.join(__dirname, '../assets/icons/png/1024x1024.png')
   });
 
-  win.loadURL(process.env.VSPOT_URL);
+  win.loadURL(store.get('url', fallbackUrl));
 
   win.once('ready-to-show', () => {
     const css = '* { cursor: none !important; }';

@@ -19,12 +19,16 @@
   "license": "MIT",
   "config": {
     "forge": {
-      "packagerConfig": {},
+      "packagerConfig": {
+        "icon": "assets/icon"
+      },
       "makers": [
         {
           "name": "@electron-forge/maker-squirrel",
           "config": {
-            "name": "vspot_app"
+            "name": "vspot_app",
+            "icon": "assets/icons/win/icon.ico",
+            "setupIcon": "assets/icons/win/icon.ico"
           }
         },
         {
@@ -45,8 +49,8 @@
     }
   },
   "dependencies": {
-    "dotenv": "^8.2.0",
-    "electron-squirrel-startup": "^1.0.0"
+    "electron-squirrel-startup": "^1.0.0",
+    "electron-store": "^5.1.0"
   },
   "devDependencies": {
     "@electron-forge/cli": "6.0.0-beta.47",
