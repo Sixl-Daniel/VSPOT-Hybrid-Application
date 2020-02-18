@@ -21,7 +21,8 @@
   "config": {
     "forge": {
       "packagerConfig": {
-        "icon": "assets/icon"
+        "icon": "assets/icon",
+        "executableName": "vspot-app"
       },
       "makers": [
         {
